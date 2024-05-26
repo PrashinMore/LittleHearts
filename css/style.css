@@ -10275,3 +10275,8 @@ a.text-dark:focus {
   justify-content: center;
   align-items: center;
 }
+
+.service-link{
+  text-decoration: none !important;
+  cursor: default;
+}
