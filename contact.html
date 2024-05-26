@@ -161,20 +161,20 @@
                         <h1 class="display-4">Send Us A Message</h1>
                     </div>
                     <div class="contact-form">
-                        <form>
+                        <form id="submit-form">
                             <div class="row">
                                 <div class="col-6 form-group">
-                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Your Name" required="required">
+                                    <input type="text" name="name" id="name" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Your Name" required="required">
                                 </div>
                                 <div class="col-6 form-group">
-                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Your Email" required="required">
+                                    <input type="email" name="email" id="email" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Your Email" required="required">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Subject" required="required">
+                                <input type="text" name="subject" id="subject" class="form-control border-top-0 border-right-0 border-left-0 p-0" placeholder="Subject" required="required">
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Message" required="required"></textarea>
+                                <textarea name="message" id="message" class="form-control border-top-0 border-right-0 border-left-0 p-0" rows="5" placeholder="Message" required="required"></textarea>
                             </div>
                             <div>
                                 <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
@@ -355,6 +355,21 @@ and every heart finds a home
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzKYKKPevjjKsjuJ3pfVXDHEbZIVzs6Dp5fZo7ov5618D2o_rlSIi-owLDnZWs9kPPsxw/exec'; // Replace with your Web App URL
+
+        const form = document.getElementById('submit-form');
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => response.json())
+                .then(response => {
+                    console.log('Success!', response);
+                    alert('Form submitted successfully');
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
 </body>
 
 </html>
