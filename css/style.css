@@ -6753,7 +6753,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #FC2F3A !important;
+  background-color: #ffffff !important;
 }
 
 a.bg-primary:hover,
@@ -10280,3 +10280,6 @@ a.text-dark:focus {
   text-decoration: none !important;
   cursor: default;
 }
+
+
+
