@@ -10280,3 +10280,49 @@ a.text-dark:focus {
   text-decoration: none !important;
   cursor: default;
 }
+
+.whatsapp-fixed a {
+  background: #fff; /* White background */
+  width: 70px; /* Width of the button */
+  height: 60px; /* Height of the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 0px;
+  bottom: 10px;
+  z-index: 99;
+  text-decoration: none; /* Remove underline */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  position: fixed;
+  top: 100px;
+  padding: 3px 20px;
+  font-size: 40px;
+  color: #25D366;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  transition: 0.5s;
+  box-shadow: none;
+  border: none;
+}
+
+.whatsapp-fixed a:hover,
+.whatsapp-fixed a:focus,
+.whatsapp-fixed a:active {
+  text-decoration: none; /* Ensure no underline on hover, focus, or active */
+  outline: none; /* Remove outline */
+}
+
+.whatsapp-fixed a:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+.whatsapp-fixed a i {
+  color: #25D366; /* Green icon color */
+  font-size: 33px; /* Font size for the icon */
+}
+
+
+
+
+
+
