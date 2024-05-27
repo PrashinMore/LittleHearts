@@ -6090,6 +6090,7 @@ a.close.disabled {
   left: 0;
   z-index: 1040;
   width: 100vw;
+  max-width: 100vw;
   height: 100vh;
   background-color: #000;
 }
@@ -7980,6 +7981,7 @@ button.bg-dark:focus {
 
 .vw-100 {
   width: 100vw !important;
+  max-width: 100vw !important;
 }
 
 .vh-100 {
@@ -10296,7 +10298,7 @@ a.text-dark:focus {
   text-decoration: none; /* Remove underline */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
   position: fixed;
-  top: 150px;
+  top: 200px;
   padding: 3px 20px;
   font-size: 40px;
   color: #25d366;
